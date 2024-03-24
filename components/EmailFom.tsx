@@ -24,10 +24,10 @@ export default function EmailForm() {
 
       if (response.ok) {
         setEmail("");
-        toast.success("Thank you for joining our waitlist! 🚀");
+        toast.success("🚀 您的电子邮件已成功提交！");
       } else {
         setEmail("");
-        toast.error("Oops! Something went wrong!");
+        toast.error(`您的电子邮件 ${email} 已经在等待列表中了! 不用再提交了哦`);
       }
     } catch (err) {
       setEmail("");
@@ -56,18 +56,18 @@ export default function EmailForm() {
             className="flex h-10 shrink-0 items-center justify-center gap-1 rounded-lg bg-[#000F2D] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-zinc-700"
             type="submit"
           >
-            <span>Join the waitlist</span>
+            <span>加入 Waitlist</span>
           </button>
         </div>
       </form>
 
-      <div className="flex items-start gap-2 text-gray-500">
+      {/* <div className="flex items-start gap-2 text-gray-500">
         <InfoCircledIcon />
         <p className="text-xs -mt-[0.5] max-w-sm">
           No worries! your data is completely safe and will only be utilized to
           provide you with updates about our product.
         </p>
-      </div>
+      </div> */}
     </>
   );
 }
